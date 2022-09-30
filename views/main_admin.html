@@ -1,0 +1,94 @@
+
+<main>
+  <section id="About">
+    <h2>About me</h2>
+    <div class="about"><img class="imgfromleft" src="img/leo.jpeg" alt="" width="150"/>
+      <p class="textfromleft">
+        There will be some text. There will be some text. There will be some text. There will be some text.
+        There will be some text. There will be some text. There will be some text. There will be some text.
+        There will be some text. There will be some text. There will be some text. There will be some text.
+        There will be some text. There will be some text. There will be some text. There will be some text.
+        There will be some text. There will be some text. There will be some text. There will be some text.
+        There will be some text. There will be some text. There will be some text. There will be some text.
+        There will be some text. There will be some text. There will be some text. There will be some text.
+        There will be some text. There will be some text. There will be some text. There will be some text.
+      </p>
+    </div>
+  </section>
+  <section id="Skills">
+    <h2>Skills</h2>
+    <ul>
+      <div class="merge">
+        <div class="merge_elem">Programming languages:
+          <ul id="programming_languages"></ul>
+        </div>
+        <div class="merge_elem">
+          <div class="wrapper_form">
+            <input id="form_label" type="checkbox"/>
+            <label class="btn_form" for="form_label">+</label>
+            <form class="popup" action="" id="post_pr_langs">
+              <label for="inp_title">Input title:</label>
+              <input id="inp_title"/>
+              <button onclick="handleSubmitNewMessagePrLang()">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="merge">
+        <div class="merge_elem">Frameworks:
+          <ul id="frameworks"></ul>
+        </div>
+        <div class="merge_elem">
+          <div class="wrapper_form">
+            <input id="form_label_frame" type="checkbox"/>
+            <label class="btn_form" for="form_label_frame">+</label>
+            <form class="popup" action="" id="post_framework">
+              <!--label.btn_close(for='form_label_frame') +-->
+              <label for="inp_title_frame">Input title:</label>
+              <input id="inp_title_frame"/>
+              <button onclick="handleSubmitNewMessageFrame()">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <li>General languages: Russian (Native), English (Upper intermediate)</li>
+    </ul>
+  </section>
+  <section id="Projects">
+    <h2>Projects</h2>
+    <ul id="project_field"></ul>
+    <div class="wrapper_form">
+      <input id="form_label_projects" type="checkbox"/>
+      <label class="btn_form" for="form_label_projects">+</label>
+      <form class="popup" action="" id="post_projects">
+        <label for="inp_title_projects">Input project title:</label>
+        <input id="inp_title_projects"/>
+        <button onclick="handleSubmitNewMessage()">Submit</button>
+      </form>
+    </div>
+  </section>
+  <section id="Quote">
+    <h2>Quote</h2>
+    <div><img class="imgfromleft" src="img/Henry_Ford.png" alt="" width="150"/>
+      <p class="textfromleft">
+        <q class="qp">&Vcy;&rcy;&iecy;&mcy;&yacy; &ncy;&iecy; &lcy;&yucy;&bcy;&icy;&tcy;, &kcy;&ocy;&gcy;&dcy;&acy; &iecy;&gcy;&ocy; &tcy;&rcy;&acy;&tcy;&yacy;&tcy; &vcy;&pcy;&ucy;&scy;&tcy;&ucy;&yucy;.</q>                    - &Gcy;&iecy;&ncy;&rcy;&icy; &Fcy;&ocy;&rcy;&dcy;.
+      </p>
+    </div>
+  </section>
+  <section id="Contacts">
+    <h2>Contacts</h2>
+    <p><a href="https://t.me/closetoothestars">Telegram</a></p>
+    <p><a href="https://github.com/pvkvetkin">Github</a></p>
+  </section>
+  <script src="scripts/get_skills.js"></script>
+  <script src="scripts/get_projects.js"></script>
+  <script type="module" src="scripts/post_pr_lang.js"></script>
+  <script type="module" src="scripts/post_framework.js"></script>
+  <script type="module" src="scripts/post_projects.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/supertokens/supertokens-website/bundle/bundle.js"></script>
+  <script src="scripts/server.js"></script>
+  <script src="https://cdn.socket.io/4.5.0/socket.io.js"></script>
+  <script src="scripts/websockets.js"></script>
+  <script src="scripts/websocket_pr_langs.js"></script>
+  <script src="scripts/websockets_frameworks.js"></script>
+</main>

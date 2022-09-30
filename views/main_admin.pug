@@ -1,0 +1,98 @@
+main
+    section#About
+        h2 About me
+        .about
+            img.imgfromleft(src='img/leo.jpeg' alt='' width='150')
+            p.textfromleft
+                | There will be some text. There will be some text. There will be some text. There will be some text.
+                | There will be some text. There will be some text. There will be some text. There will be some text.
+                | There will be some text. There will be some text. There will be some text. There will be some text.
+                | There will be some text. There will be some text. There will be some text. There will be some text.
+                | There will be some text. There will be some text. There will be some text. There will be some text.
+                | There will be some text. There will be some text. There will be some text. There will be some text.
+                | There will be some text. There will be some text. There will be some text. There will be some text.
+                | There will be some text. There will be some text. There will be some text. There will be some text.
+    section#Skills
+        h2 Skills
+        ul
+            .merge
+                .merge_elem
+                    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#skillModal' data-bs-backdrop="false") add
+                    #skillModal.modal.fade(tabindex='-1' aria-labelledby='skillModalLabel' aria-hidden='true')
+                        .modal-dialog
+                            .border.modal-content
+                                .modal-header
+                                    h5#skillModalLabel.modal-title Add New Programming Language
+                                    button.btn-close.bg-light(type='button' data-bs-dismiss='modal' aria-label='Close')
+                                .modal-body
+                                    form(action='' id='post_pr_langs')
+                                        .mb-3
+                                            label.col-form-label(for='inp_title') Enter programming language:
+                                            input#inp_title.form-control
+                                        .modal-footer
+                                            button.btn.btn-primary(onclick='handleSubmitNewMessagePrLang()') Add
+                    | Programming languages:
+                    br
+                    br
+                    ul#programming_languages
+            .merge
+                .merge_elem
+                    br
+
+                    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#frameworkModal' data-bs-backdrop="false") add
+                    #frameworkModal.modal.fade(tabindex='-1' aria-labelledby='frameworkModalLabel' aria-hidden='true')
+                        .modal-dialog
+                            .border.modal-content
+                                .modal-header
+                                    h5#frameworkModalLabel.modal-title Add New Framework
+                                    button.btn-close.bg-light(type='button' data-bs-dismiss='modal' aria-label='Close')
+                                .modal-body
+                                    form(action='' id='post_framework')
+                                        .mb-3
+                                            label.col-form-label(for='inp_title_frame') Enter framework:
+                                            input#inp_title_frame.form-control
+                                        .modal-footer
+                                            button.btn.btn-primary(onclick='handleSubmitNewMessageFrame()') Add
+                    | Frameworks:
+                    br
+                    br
+                    ul#frameworks
+                    br
+                .merge_elem
+                    .wrapper_form
+            .li_languages
+                li
+                    b
+                        | General languages
+                    | : Russian (Native), English (Upper intermediate)
+    section#Projects
+        h2 Projects
+        button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#projectModal' data-bs-backdrop="false") add
+        #projectModal.modal.fade(tabindex='-1' aria-labelledby='projectModalLabel' aria-hidden='true')
+            .modal-dialog
+                .border.modal-content
+                    .modal-header
+                        h5#projectModalLabel.modal-title Add New Project
+                        button.btn-close.bg-light(type='button' data-bs-dismiss='modal' aria-label='Close')
+                    .modal-body
+                        form(action='' id='post_projects')
+                            .mb-3
+                                label.col-form-label(for='inp_title_projects') Enter title:
+                                input#inp_title_projects.form-control
+                            .mb-3
+                                label.col-form-label(for='inp_description_projects') Enter description:
+                                textarea#inp_description_projects.form-control
+                            .modal-footer
+                                button.btn.btn-primary(onclick='handleSubmitNewMessageProjects()') Add
+        ul#project_field
+    section#Quote
+        h2 Favorite Quote
+        .about
+            img.imgfromleft(src='img/Henry_Ford.png' alt='' width='150')
+            p.quoute_from_left
+                q.qp Time and silence are the most luxurious things today.
+                |                     - Tom Ford.
+
+
+
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Web CV</title>
+    <meta name="description" content="Web CV, Kvetkin Pavel">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <!-- <link rel="stylesheet" href="/path/to/flickity.css" media="screen"> -->
+    <script src="scripts/main.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <ul class="headerLi">
+            <a class="btn"href="#About">About me</a>
+            <a class="btn"href="#Skills">Skills</a>
+            <a class="btn"href="#Code">Code</a>
+            <a class="btn"href="#Contacts">Contacts</a>
+        </ul>
+    </header>
+
+    <main>
+        <section id="About">
+            <h2>About me</h2>
+            <div class="about">
+                <img class="imgfromleft" src="img/leo.jpeg" alt="" width="150">
+                <p class="textfromleft">
+                    There will be some text. There will be some text. There will be some text. There will be some text.
+                    There will be some text. There will be some text. There will be some text. There will be some text.
+                    There will be some text. There will be some text. There will be some text. There will be some text.
+                    There will be some text. There will be some text. There will be some text. There will be some text.
+                    There will be some text. There will be some text. There will be some text. There will be some text.
+                    There will be some text. There will be some text. There will be some text. There will be some text.
+                    There will be some text. There will be some text. There will be some text. There will be some text.
+                    There will be some text. There will be some text. There will be some text. There will be some text.
+                </p>
+            </div>
+        </section>
+        <section id="Skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>
+                    Programming languages: Java, Python, C++.
+                </li>
+                <li>
+                    Preferences: Spring BOOT...
+                </li>
+            </ul>
+        </section>
+        <section id="Code">
+            <h2>The best code</h2>
+            <pre>
+                    <code>
+                        .MODEL SMALL
+                        .STACK 100h
+                        .DATA
+                        HelloMessage DB 'Hello World',13,10,'$'
+                        .CODE
+                        START:
+                            mov ax,@data
+                            mov ds,ax
+                            mov ah,9
+                            mov dx,OFFSET HelloMessage
+                            int 21h
+                            mov ah,4ch
+                            int 21h
+                        END START
+                    </code>
+                </pre>
+        </section>
+        <section id="Quote">
+            <h2>Quote</h2>
+            <div>
+                <img class="imgfromleft" src="img/Henry_Ford.png" alt="" width="150">
+                <p class="textfromleft">
+                    <q class="qp">Время не любит, когда его тратят впустую.</q>
+                    - Генри Форд.
+                </p>
+            </div>
+        </section>
+        <!-- <section>
+        <table class="tbl">
+            <tr>
+                <th>Что я люблю</th>
+                <th>Как я люблю</th>
+            </tr>
+            <tr>
+                <td>HTML</td>
+                <td>Ну так</td>
+            </tr>
+            <tr>
+                <td>CSS</td>
+                <td>Уже другое дело</td>
+            </tr>
+        </table>
+    </section> -->
+        <section id="Contacts">
+            <h2>Contacts</h2>
+            <p>
+                <a href="https://t.me/closetoothestars">
+                    Telegram
+                </a>
+            </p>
+            <p>
+                <a href="https://github.com/pvkvetkin">
+                    Github
+                </a>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy 2021 Kvetkin Pavel
+        </p>
+        
+        <script>
+            window.addEventListener("load", () => document.getElementById("timerOnLoad").innerText = "||| loading time is: " + timeOnLoad + " seconds")
+        </script>
+        <p id="timerOnLoad">
+        </p>
+    </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="scripts/flickity.js"></script>
+    <script src="scripts/current.js"></script>
+</body>
+
+</html>

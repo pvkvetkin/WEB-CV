@@ -1,0 +1,50 @@
+doctype html
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    title Callback
+    meta(name='description' content='Web CV, Kvetkin Pavel')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+body
+    script(src='https://cdn.jsdelivr.net/gh/supertokens/supertokens-website/bundle/bundle.js')
+    script.
+      window.addEventListener('load', async function(event) {
+        supertokens.init({
+          apiDomain: "https://web-sem6.herokuapp.com",
+          apiBasePath: "/api"
+        });
+        let code = new URL(window.location.href).searchParams.get('code');
+        // const responseCode = await fetch("https://web-sem6.herokuapp.com/api/signinup", {
+        const responseCode = await fetch("http://localhost:12345/api/signinup", {
+          method: "POST",
+          headers: {
+            "rid": "thirdparty",
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            code,
+            // redirectURI: "https://web-sem6.herokuapp.com/callback/github",
+            redirectURI: "http://localhost:12345/callback/github",
+            thirdPartyId: "github"
+          })
+        });
+
+        window.location.href = "/";
+
+
+        if (await supertokens.doesSessionExist()) {
+          data = { username: "", email: "", role: "DEFAULT" };
+          fetch('/users/create', {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: { "Content-Type": "application/json" }
+          }).then((response) => response.json())
+            .then((text) => console.log(text))
+            .catch((error) =>
+              console.error(error)
+            );
+        }
+
+      });
+
+

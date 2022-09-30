@@ -1,0 +1,38 @@
+.content {
+    padding: 25%;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+.content .btn {
+    height: 54px;
+    padding-left: 30px;
+    padding-right: 30px; }
+
+.social-login a {
+    text-decoration: none;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px; }
+.social-login a span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+.social-login a:hover {
+    color: #fff; }
+.social-login a.github {
+    background: #24292f; }
+.social-login a.github:hover {
+    background: #32363c; }
+.social-login a.google {
+    background: #ea4335; }
+.social-login a.google:hover {
+    background: rgb(244, 78, 62); }

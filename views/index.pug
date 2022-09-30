@@ -1,0 +1,25 @@
+//extends header
+
+doctype html
+head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    title Web CV
+    meta(name='description' content='Web CV, Kvetkin Pavel')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' href='css/style.css')
+    link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=JetBrains Mono')
+
+    script(src='scripts/main.js')
+body
+    include header
+    include main
+    .wrapper
+        include footer
+script(src='https://cdn.jsdelivr.net/gh/supertokens/supertokens-website/bundle/bundle.js')
+//script(src='scripts/server.js')
+script(src='https://cdn.socket.io/4.5.0/socket.io.js')
+script(src='scripts/websocket_projects.js')
+script(src='scripts/websocket_pr_langs.js')
+script(src='scripts/websocket_frameworks.js')
+
